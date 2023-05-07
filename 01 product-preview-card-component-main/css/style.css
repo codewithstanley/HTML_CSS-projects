@@ -1,0 +1,27 @@
+:root {
+    /* primary */
+    --dark_cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+/*  Neutral */
+    --very_dark_blue: hsl(212, 21%, 14%);
+    --dark_grayish_blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --fontSize: 14px;
+    --fontFamily_heading: 'Fraunces', serif;
+    --font-family_paragraph: 'Montserrat', sans-serif;
+}
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: var(--font-family_paragraph);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--fontFamily_heading);
+}
+
+
