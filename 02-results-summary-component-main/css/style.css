@@ -1,9 +1,13 @@
 :root {
     /*### primary */
     --light-red: hsl(0, 100%, 67%);
+    --very-light-red: hsl(0, 85%, 92%);
     --orangey-yellow: hsl(39, 100%, 56%);
+    --very-orangey-yellow: hsl(38, 66%, 92%);
     --green-teal: hsl(166, 100%, 37%);
+    --very-green-teal: hsl(165, 85%, 92%);
     --cobalt-blue: hsl(234, 85%, 45%);
+    --very-cobalt-blue: hsl(233, 62%, 92%);
 
     /* ### Gradients - background */
     --light-slate-blue: hsl(252, 100%, 67%);
@@ -42,11 +46,13 @@ main {
 }
 
 section {
+    border: 1px solid red;
  display: grid;
  grid-template-columns: 1fr;
  grid-template-rows: repeat(2, 1fr);
+ margin-top: 100px;
  
- width: 50ch;
+ width: 35ch;
 }
 
 .result {
@@ -90,5 +96,41 @@ section {
 }
 
 .summary {
-    background-color: var(--white);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.summaryHeader {
+    margin: 15px 0;
+}
+
+.item {
+    font-size: 0.8rem;
+    background-color: red;
+    padding: 10px;
+    margin: 0 auto 10px;
+    /* width: 80%; */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+
+.item1 {
+    color: var(--light-red);
+    background-color: var(--very-light-red);
+}
+
+.item2 {
+    color: var(--orangey-yellow);
+    background-color: var(--very-orangey-yellow);
+}
+
+.item3 {
+   color: var(--green-teal);
+   background-color: var(--very-green-teal);
+}
+
+.item4 {
+  color: var(--cobalt-blue);
+  background-color: var(--very-cobalt-blue);
 }

@@ -1,0 +1,60 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--light-gray);
+    font-family: 'Outfit', sans-serif;
+    
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.bar-code{
+    width: 30ch;
+    background-color: var(--white);
+    height: 70vh;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.img-barcode {
+    background: url(../images/image-qr-code.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    height: 40vh;
+}
+
+.barcode-content{
+    text-align: center;
+    padding: 0 10px;
+}
+
+.barcode-content h2{
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.barcode-content p{
+    padding-bottom: 20px;
+    color: var(--grayish-blue);
+}

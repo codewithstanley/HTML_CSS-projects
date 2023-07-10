@@ -1,6 +1,7 @@
 :root {
     /* primary */
     --dark_cyan: hsl(158, 36%, 37%);
+    --very_dark_cyan: hsl(160, 33%, 23%);
     --cream: hsl(30, 38%, 92%);
 /*  Neutral */
     --very_dark_blue: hsl(212, 21%, 14%);
@@ -109,6 +110,14 @@ section {
     color: var(--white);
     font-weight: 700;
     font-family: var(--font-family_paragraph);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+    background-color: var(--very_dark_cyan);
 }
 
 .btn img {
