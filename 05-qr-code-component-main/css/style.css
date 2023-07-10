@@ -47,9 +47,9 @@ main {
     padding: 0 10px;
 }
 
-.barcode-content h2{
+.barcode-content h1{
     margin: 15px 0;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--dark-blue);
 }
