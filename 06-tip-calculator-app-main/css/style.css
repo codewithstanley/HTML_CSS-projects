@@ -1,0 +1,97 @@
+:root {
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--grayish-cyan);
+    height: 100vh;
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section{
+    width: 20ch;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.top-bill {
+    margin-bottom: 20px;
+}
+
+.total-bill {
+    background-color: var(--very-dark-cyan);
+    padding: 30px 15px;
+    border-radius: 15px;
+}
+
+.form-group {
+    display: block;
+}
+
+label{
+    font-size: 0.8rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--light-grayish-cyan);
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.btn-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 20px 0;
+}
+
+
+.btn {
+    font-family: inherit;
+    font-size: 1.1rem;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    flex: 0 0 130px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-reset {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--light-grayish-cyan);
+}
+
+.tip-amount {
+    display: flex;
+    justify-content: space-between;
+    
+}

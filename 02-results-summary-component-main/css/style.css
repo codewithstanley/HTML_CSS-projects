@@ -8,6 +8,15 @@
     --very-green-teal: hsl(165, 85%, 92%);
     --cobalt-blue: hsl(234, 85%, 45%);
     --very-cobalt-blue: hsl(233, 62%, 92%);
+    /* ## */
+    --background-one:hsl(6, 100%, 98%);
+    --background-two: hsl(42, 100%, 97%);
+    --background-three: hsl(173, 53%, 97%);
+    --background-four: hsl(240, 71%, 97%);
+    --text-1: hsl(359, 69%, 70%);
+    --text-2: hsl(42, 84%, 83%);
+    --text-3: hsl(164, 45%, 53%);
+    --text-4: hsl(236, 38%, 55%);
 
     /* ### Gradients - background */
     --light-slate-blue: hsl(252, 100%, 67%);
@@ -35,6 +44,7 @@
 
 body {
     font-family: 'Hanken Grotesk', sans-serif;
+    font-size: var(--fontSize);
 }
 
 main {
@@ -46,53 +56,73 @@ main {
 }
 
 section {
-    border: 1px solid red;
+    /* border: 1px solid red; */
  display: grid;
  grid-template-columns: 1fr;
  grid-template-rows: repeat(2, 1fr);
- margin-top: 100px;
+ /* margin-top: 100px; */
  
  width: 35ch;
 }
 
 .result {
-    background: linear-gradient(top bottom var(--light-slate-blue), var(--light-royal-blue));
+    background: linear-gradient(top bottom, var(--light-slate-blue), var(--light-royal-blue));
     background: var(--light-royal-blue);
     border-radius: 0 0 30px 30px;
     text-align: center;
     padding: 30px 0; 
-}
-
-.result h3{
     color: var(--white);
-    margin-bottom: 30px;
 }
 
-.result .result-score {
+.result h1{
+    font-size: 0.9rem;
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.result-score  {
     margin: 0 auto;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     background-color: var(--cobalt-blue);
     border-radius: 50%;
     font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: var(--white);
+
 }
 
-.result span{
-    font-size: 1rem;
+.result-score div {
+    display: flex;
+    flex-direction: column;
 }
+
+.result-score .score span:first-child {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.result-score .score span:last-child {
+    font-size: 0.8rem;
+    color: hsl(201, 16%, 82%);
+}
+
+/* .result span{
+    font-size: 1rem;
+} */
 
 .result .great{
     font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .result .desc{
     width: 30ch;
-  margin: 0 auto;
+    margin: 0 auto;
+    font-size: 0.8rem;
 }
 
 .summary {
@@ -106,31 +136,67 @@ section {
 
 .item {
     font-size: 0.8rem;
-    background-color: red;
+    /* background-color: red; */
     padding: 10px;
     margin: 0 auto 10px;
     /* width: 80%; */
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
-    align-items: center;}
+    align-items: center;
+}
+
+.test-category {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.test-category img{
+    width: 15px;
+}
+
+.test-category span{
+    margin-left: 10px;
+}
+
+.test-score>span:first-child {
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+    margin-right: 5px;
+}
 
 .item1 {
-    color: var(--light-red);
-    background-color: var(--very-light-red);
+    color: var(--text-1);
+    background-color: var(--background-one);
+}
+
+.test-score>span:last-child {
+    color: var(--light-lavender);
 }
 
 .item2 {
-    color: var(--orangey-yellow);
-    background-color: var(--very-orangey-yellow);
+    color: var(--text-2);
+    background-color: var(--background-two);
 }
 
 .item3 {
-   color: var(--green-teal);
-   background-color: var(--very-green-teal);
+   color: var(--text-3);
+   background-color: var(--background-three);
 }
 
 .item4 {
-  color: var(--cobalt-blue);
-  background-color: var(--very-cobalt-blue);
+  color: var(--text-4);
+  background-color: var(--background-four);
+}
+
+.btn {
+    width: 100%;
+    border-radius: 30px;
+    padding: 15px 0;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
 }

@@ -1,6 +1,11 @@
 const submitButton = document.querySelector('#submit-button');
-const listItem = document.querySelectorAll('.list-item');
+const itemList = document.querySelector('.item-list');
 const blockSection = document.querySelector('#section-block');
+
+console.log(itemList.children[3].textContent);
+
+
+
 
 // console.log(submitButton);
 
