@@ -100,3 +100,37 @@ a {
     height: 20em;
     background-color: forestgreen;
 }
+
+.galleries {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 40ch;
+}
+
+.gallery-1{
+    background: url(../images/mobile/image-gallery-milkbottles.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gallery-2{
+    background: url(../images/mobile/image-gallery-orange.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gallery-3{
+    background: url(../images/mobile/image-gallery-cone.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gallery-4{
+    background: url(../images/mobile/image-gallery-sugar-cubes.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

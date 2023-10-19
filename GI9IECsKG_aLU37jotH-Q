@@ -1,0 +1,77 @@
+[33mcommit c2c4d0f60fbfea646554dc40edf3481b8f6dc35c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Wed Oct 18 16:45:39 2023 +0100
+
+    added more projects and completed the single price component master
+
+[33mcommit 13a7f5d0267efe9a35cbabc37d0894e6bd8d8626[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Fri Aug 25 16:48:40 2023 +0100
+
+    added two more frontendmentor projects
+
+[33mcommit 9a8c7d76e1050d92e1d49b15d9534c393d58940b[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Mon Jul 10 17:37:26 2023 +0100
+
+    created a footer section for the div class attribution
+
+[33mcommit 3428f80ce88cd7b0b05b47e6b592378bbe9ae6e2[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Mon Jul 10 17:31:00 2023 +0100
+
+    replaced the h2 css property to h1
+
+[33mcommit 4248c9bc1908bfc308277ba01853b2c09a7731ee[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Mon Jul 10 17:28:57 2023 +0100
+
+    replaced the h2 element to h1
+
+[33mcommit d0870d907767dc1837093a226e8568fbdd30c887[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Mon Jul 10 17:25:05 2023 +0100
+
+    added a href link to github for access to the code
+
+[33mcommit 0a9c561e4219e7ecb821dec9a314d9f80e2176e3[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Mon Jul 10 16:47:28 2023 +0100
+
+    made some changes in the js script for the interactive rating and completed the qr code component-main
+
+[33mcommit 3aa7b80797487c84146246eede383977d2072c7c[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Fri Jun 2 19:31:23 2023 +0100
+
+    created css stylesheet for project 02
+
+[33mcommit f4164de0cc6289504440d85d9d4a70dcdc38db2f[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Fri Jun 2 15:00:32 2023 +0100
+
+    project number 02 setup
+
+[33mcommit 5e2e7f4f046d21d7a2e201be2524a8c131d96004[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Fri Jun 2 13:35:30 2023 +0100
+
+    complete project with css grid and css flex
+
+[33mcommit a891ff0e7cb3858b371c96513efdb84677140179[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Sun May 7 18:45:59 2023 +0100
+
+    created mobile responsive view
+
+[33mcommit d33c9a1ebc3231a74682587d9dde3b6844287f82[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Sun May 7 17:42:35 2023 +0100
+
+    created css style sheet for the project 01
+
+[33mcommit a84e358cc63da1b72c2131a2c43044d9db8dc306[m
+Author: codewithstanley <codewithstanley@gmail.com>
+Date:   Sun May 7 17:12:37 2023 +0100
+
+    initial project folder
