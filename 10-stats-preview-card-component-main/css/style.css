@@ -24,8 +24,120 @@
 
 body {
     font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: var(--very-dark-blue);
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Inter', sans-serif;
+}
+
+main {
+    color: var(--white);
+    width: 30ch;
+    margin: 30px auto;
+}
+
+section > div:first-child {
+    background: url(../images/image-header-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20ch;
+}
+
+section > div:last-child {
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--dark-desaturated-blue);;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    font-weight: 700;
+    padding: 0 30px;
+}
+
+h2 > span {
+    color: var(--soft-violet);
+}
+
+p {
+    font-size: 0.6rem;
+    margin-bottom: 20px;
+    color: var(--slightly-transparent-white-2);
+    padding: 0 50px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.rating > span:first-child {
+    font-size: 1.1rem;
+}
+
+.rating > span:last-child {
+    
+    font-size: 0.5rem;
+    color: var(--slightly-transparent-white-2);
+    margin-bottom: 15px;
+}
+
+@supports (grid-area: auto) { 
+    @media screen and (min-width: 600px) {
+        main {
+            width: 80ch;
+            height: 45vh;
+            margin-top: 100px;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            height: 100%;
+        }
+
+        section > div:first-child {
+            background: url(../images/image-header-desktop.jpg);
+            grid-column: 2/3;
+            height: auto;
+        }
+
+        section > div:last-child {
+            grid-column: 1/2;
+            grid-row: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            text-align: left;
+            
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            padding-right: 70px;
+            line-height: 1.4;
+        }
+
+        p{
+            padding-left: 30px;
+        }
+
+        .ranking {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 70px 0 30px;
+        }
+
+        .rating > span:last-child {
+            margin-bottom: 0;
+        }
+        
+    }
 }
