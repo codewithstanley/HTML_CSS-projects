@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+    /* ## Colors */
+    --Purple-100: hsl(254, 88%, 90%);
+    --Purple-500: hsl(256, 67%, 59%);
+    --Yellow-100: hsl(31, 66%, 93%);
+    --Yellow-500: hsl(39, 100%, 71%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 7%);
+
+    --border-div: 8px;
+    --margin-top-div:  30px;
+    --padding-div: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    line-height: 1;
+    font-size: 18px;
+    background-color: hsl(0, 29%, 97%);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* img {
+    max-width: 100%;
+} */
+
+.main-container {
+    margin: 20px;
+}
+
+.div-block-1{
+    background-color: var(--Purple-500);
+    color: var(--White);
+    padding: var(--padding-div);
+    border-radius: var(--border-div);
+    text-align: center;
+}
+
+.div-block-1 h1 {
+    padding: 25px 45px;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.div-block-1 span {
+    color: var(--Yellow-500);
+}
+
+.div-block-1 img {
+    width: 50%;
+}
+.div-block-1 p{
+    margin: 10px 0;
+    font-size: 1.2rem;}
+
+.div-block-2{
+    padding: var(--padding-div);
+    background-color: var(--White);
+    border-radius: var(--border-div);
+    margin-top: var(--margin-top-div);
+}
+
+.div-block-2 img{
+   max-width: 100%;
+}
+
+.div-block-2 h2{
+    font-size: 2rem;
+    line-height: 0.8;
+    font-weight: 500;
+}
+
+.div-block-3 {
+    background-color: var(--Yellow-500);
+    padding: 20px 20px 0 20px;
+    border-radius: var(--border-div);
+    margin-top: var(--margin-top-div);
+    height: 300px;
+    overflow: hidden;
+}
+
+.div-block-3 h2{
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.div-block-3 img {
+    width: 70%;
+}
+
+.div-block-4{
+    background-color: var(--Purple-100);
+    border-radius: var(--border-div);
+    margin-top: var(--margin-top-div);
+    padding: 20px;
+    text-align: center;
+}
+
+.div-block-4 h2{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.div-block-4 img{
+    max-width: 100%;
+}
+
+.div-block-4 p{
+    padding: 20px 40px 20px 50px;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 1.5rem;;
+}
+
+.div-block-5 {
+    background-color: var(--Purple-500);
+    margin-top: var(--margin-top-div);
+    border-radius: var(--border-div);
+    text-align: center;
+    padding: 20px;
+    color: var(--White);
+}
+
+.div-block-5 img{
+    max-width: 70%;
+}
+
+.div-block-5 p{
+    font-size: 2rem;
+    line-height: 1;
+    margin: 10px 0;
+    padding: 0 80px;
+    font-weight: 500;
+}
+
+.div-block-6{
+    margin-top: var(--margin-top-div);
+    background-color: var(--White);
+    padding: 20px;
+    border-radius: var(--border-div);
+}
+
+.div-block-6 h3{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.div-block-6 p{
+    margin-bottom: 20px;;
+}
+
+.div-block-6 img {
+    max-width: 70%;
+}
+
+.div-block-7 {
+    background-color: var(--Yellow-100);
+    margin-top: var(--margin-top-div);
+    border-radius: var(--border-div);
+    padding: 20px;
+}
+
+.div-block-7 h3{
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.div-block-7 h3 span{
+    color: var(--Purple-500);
+}
+
+.div-block-7 img{
+    max-width: 50%;
+}
+
+.div-block-8 {
+    background-color: var(--Yellow-500);
+    margin-top: var(--margin-top-div);
+    padding: 20px;
+    border-radius: var(--border-div);
+}
+
+.div-block-8 h3{
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+    line-height: 0.8;
+}
+
+.div-block-8 img{
+    max-width: 60%;
+}
+
+@media (width >= 400px) {
+
+    /* body {
+        width: 80%;
+        margin: auto;
+    }  */
+   
+    .main-container {
+        display: grid;
+        grid-template-columns: repeat(4, 180px);
+        grid-template-rows: 230px 50px 100px 150px;
+        gap: 20px;
+        /* margin: 0 auto; */
+    }
+
+    .div-block-1 {
+        margin-top: 0;
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+
+    .div-block-1 h1 {
+        padding: 0 45px;
+        font-size: 2.5rem;
+    }
+       
+    .div-block-1 img {
+        width: 40%;
+    }
+    .div-block-1 p{
+        font-size: 1rem;}
+
+    .div-block-2 {
+        margin-top: 0;
+        grid-column: 2/3;
+        grid-row: 2/4;
+        overflow: hidden;
+    }
+
+    .div-block-2 img{
+        max-width: 150%;
+     }
+     
+     .div-block-2 h2{
+        margin-top: 5px;
+         font-size: 1.5rem;
+     }
+
+    .div-block-3 {
+        margin-top: 0;
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+        height: auto;
+    }
+
+    .div-block-3 h2{
+        font-size: 1rem;
+    }
+    
+    .div-block-3 img {
+        width: 100%;
+    }
+
+    .div-block-4 {
+        margin-top: 0;
+        grid-column: 4/5;
+        grid-row: 1/4;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .div-block-4 h2{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .div-block-4 img{
+        max-width: 150%;
+    }
+    
+    .div-block-4 p{
+        font-size: 0.8rem;
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .div-block-5 {
+        margin-top: 0;
+        grid-column: 3 / 5;
+        grid-row: 4 / 5;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .div-block-5 img{
+        max-width: 35%;
+    }
+    
+    .div-block-5 p{
+        font-size: 1.5rem;
+        padding: 0 0 0 35px;
+    }
+
+    .div-block-6 {
+        margin-top: 0;
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+
+    .div-block-6 h3{
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .div-block-6 p{
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .div-block-6 img {
+        max-width: 50%;
+    }
+    
+
+    .div-block-7 {
+        margin-top: 0;
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    .div-block-8 {
+        margin-top: 0;
+        grid-column: 1/2;
+        grid-row: 3/5;
+    }
+}

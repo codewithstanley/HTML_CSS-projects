@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Outfit:wght@100..900&family=Young+Serif&display=swap')
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  /*### Primary */
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+
+    /* ### Neutral */
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);  
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    width: 40ch;
+    margin: 0 auto;
+    /* padding-right: 20px; */
+}
+
+.top-image {
+    height: 20ch;
+    background: url(../assets/images/image-omelette.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bottom-part {
+    padding-right: 30px;
+}
+
+h1, h2{
+    font-family: 'Young Serif', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 400;
+}
+
+h2 {
+   font-size: 1.5rem; 
+}
+
+p {
+    /* font-size: 0.95rem; */
+    font-weight: 400;
+}
+
+.prep-time {
+    background-color: var(--light-grey);
+    padding: 20px 20px 20px 50px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.prep-time ul li{
+    /* margin-bottom: 15px; */
+    line-height: 2;
+}
