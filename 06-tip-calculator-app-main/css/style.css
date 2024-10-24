@@ -1,5 +1,8 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+
 :root {
     --very-dark-cyan: hsl(183, 100%, 15%);
+    --very-bright-cyan: hsl(183, 60%, 42%);
     --dark-grayish-cyan: hsl(186, 14%, 43%);
     --grayish-cyan: hsl(184, 14%, 56%);
     --light-grayish-cyan: hsl(185, 41%, 84%);
@@ -17,8 +20,7 @@ body {
     background-color: var(--grayish-cyan);
     height: 100vh;
     font-size: 24px;
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
+    font-family: "Space Mono", monospace;
 }
 
 main {
@@ -28,70 +30,211 @@ main {
     flex-direction: column;
 }
 
-section{
-    width: 20ch;
+.main-section {
     background-color: var(--white);
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
+    max-width: 375px;
+    margin-top: 1.5rem;
+
+} 
+
+h1{
+    margin: 0;
+    line-height: 1;
+    font-size: 1.5rem;
+    color: var(--dark-grayish-cyan);
 }
 
-.top-bill {
-    margin-bottom: 20px;
+.input-section {
+    font-size: 1rem;
+    width: 28ch;
 }
 
-.total-bill {
-    background-color: var(--very-dark-cyan);
-    padding: 30px 15px;
-    border-radius: 15px;
+label {
+    font-size: 0.6rem;
 }
 
 .form-group {
-    display: block;
+    position: relative;
 }
 
-label{
-    font-size: 0.8rem;
+.form-group input[type=Number] {
+    text-align: right;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: "Space Mono", monospace;
 }
 
-input {
+.form-group i{
+    position: absolute;
+    top: 33px;
+    left: 8px;
+    font-size: 0.5rem;
+    color: var(--grayish-cyan);
+}
+
+.input-section .form-group input[type=Number] {
+    display: flex;
     width: 100%;
-    padding: 10px;
-    background-color: var(--light-grayish-cyan);
-    border: none;
-    margin-top: 5px;
-    border-radius: 5px;
+    border-radius: 4px;
+    border: 2px solid var(--very-light-grayish-cyan);
+    background-color: var(--very-light-grayish-cyan);
+    padding: 5px 0;
+    margin-bottom: 1.2rem;
+    font-family: "Space Mono", monospace;
+    outline: none;
+    transition: 0.3s ease;
 }
 
-.btn-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
+.input-section .form-group input[type=Number]:hover, 
+.input-section .form-group input[type=Number]:active {
+    border: 2px solid var(--very-bright-cyan);
+}
+
+.input-section .btn-group{ 
+    display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 0 0 20px 0;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-
-.btn {
-    font-family: inherit;
-    font-size: 1.1rem;
+.input-section .btn-group input[type=button] {
+    font-family: 'Space Mono', monospace;
+    width: 8rem;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
     background-color: var(--very-dark-cyan);
     color: var(--white);
-    flex: 0 0 130px;
-    border-radius: 5px;
-    padding: 5px;
     cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.input-section .btn-group input[type=button]:hover {
+    background-color: var(--very-bright-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.input-section fieldset {
     border: none;
 }
 
-.btn-reset {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--light-grayish-cyan);
+.input-section .btn-group input[type=Number] {
+    width: 127px;
+    padding: 5px;
+    background-color: var(--very-light-grayish-cyan);
+    border: none;
+    color: var(--dark-grayish-cyan);
+    font-weight: 700;
+    text-align: right;
 }
 
-.tip-amount {
+.input-section .btn-group input[type=Number]:hover,
+.input-section .btn-group input[type=Number]:active {
+    border: 2px solid var(--very-bright-cyan);
+}
+
+.display-section{
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.display-section .total-bill .tip-amount {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.display-section .total-bill .tip-amount p:first-child {
+    font-size: 0.75rem;
+}
+
+.display-section .total-bill .tip-amount p span{
+    font-size: 0.5rem;
+    display: block;
+    color: var(--very-bright-cyan);
+}
+
+.display-section .total-bill .tip-amount p:last-child {
+    font-size: 1.8rem;
+    color: var(--very-bright-cyan);
+    margin-bottom: 1.1rem;
+}
+
+.display-section input[type=reset] {
+    width: 100%;
+    text-transform: uppercase;
+    padding: 5px;
+    color: var(--very-dark-cyan);
+    background-color: var(--grayish-cyan);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Space Mono', monospace;
+    transition: 0.3 ease;
+}
+
+.display-section input[type=reset]:hover {
+    background-color: var(--very-bright-cyan);
+    color: var(--very-dark-cyan);
+}
+
+
+@media (min-width: 786px) {
+    .main-section {
+        display: flex;
+        max-width: 90%;
+        width: 50vw;
+        height: 55vh;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .input-section {
+        flex: 1 0;
+        padding: 0 10px;
+    }
+
+    .display-section {
+        flex: 1 0;
+    }
+
+    .input-section .form-group input[type=Number] {
+        display: flex;
+        max-width: 100%;
+    }
+
+    .input-section .btn-group{ 
+        display: flex;
+        gap: 10px;
+        /* margin-bottom: 10px;    */
+    }
+
+    .input-section .btn-group input[type=button] {
+        width: 5.55rem;
+    }
+
+    .input-section .btn-group input[type=Number] {
+        width: 5.5rem;
+        padding: 8px;
+    }
+
+    .display-section input[type=reset]{
+        display: flex;
+        justify-content: center;
+        align-self: flex-end;
+    }
     
+
+   
 }

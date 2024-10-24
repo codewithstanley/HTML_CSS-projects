@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6c47238f49.js" crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/6c47238f49.js" crossorigin="anonymous"></script>
+    
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,54 +20,62 @@
 <body>
 
   <main>
-    <h2>SLITTER</h2>
-    <section>
-      <div class="top-bill">
+    <h1>SPLI</h1><h1>TTER</h1>
+    <section class="main-section">
+      <section class="input-section">
+        
         <form action="">
           <div class="form-group">
-          <label for="bill">Bill</label>
-          <input type="number" placeholder="$">
-        </div>
+            <label for="bill">Bill</label>
+            <input type="Number" placeholder="0" id="bill">
+            <i class="fa fa-usd"></i>
+          </div>
         
-        </form>
-        <label>Select Tip %</label>
-        <div class="btn-group">
-          
-          <button class="btn">5%</button>
-          <button class="btn">10%</button>
-          <button class="btn">15%</button>
-          <button class="btn">25%</button>
-          <button class="btn">50%</button>
-        </div>
-        <form action="">
-          <div class="form-field">
+        
+          <fieldset>
+            <label>Select Tip %</label>
+            <div class="btn-group">
+              <input type="button" value="5%" class="btn">
+              <input type="button" value="10%" class="btn">
+              <input type="button" value="15%" class="btn">
+              <input type="button" value="25%" class="btn">
+              <input type="button" value="50%" class="btn">
+              <input type="Number" name="custom" id="btn"placeholder="Custom">
+            </div>
+        </fieldset>
+        
+        <div class="form-group">
           <label for="bill">Number of People</label>
-          <input type="number" placeholder="$">
+          <input type="Number" placeholder="0">
+          <i class="fa fa-user"></i>
         </div>
         
         </form>
       </div>
+    </section>
+    <section class="display-section">
       <div class="total-bill">
         <div class="tip-amount">
           <p>Tip Amount <span>/ person</span></p>
-          <p>$4.27</p>
+          <p>$0.00</p>
         </div>
         <div class="tip-amount">
           <p>Total <span>/ person</span></p>  
           
-          <p>$32.79</p>
+          <p>$0.00</p>
         </div>
         
-        <button class="btn-reset">reset</button>
+        <input type="reset" value="reset">
         
       </div>
+    </section>
     </section>
   </main>
   
   <footer>
      <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">codewithstanley</a>.
     </div>
   </footer>
 </body>

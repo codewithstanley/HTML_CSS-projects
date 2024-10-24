@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6c47238f49.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input[type = Number] {
+            width: 250px;
+            outline: none;
+        }
+
+        .inputBtn {
+            border: 1px solid red;
+            width: 250px;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 15px 0;
+        }
+
+        .inputBtn input[type=button] {
+            cursor: pointer;
+            padding: 5px 20px;
+            border-radius: 5px;
+            /* border: none; */
+            margin-right: 3px;
+            width: 70px;
+            border: 1px solid black;
+        }
+
+        .inputBtn input[type=Number] {
+            width: 60px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .numpersons {
+            font-size: 0.75rem;
+            text-align: right;
+            margin: 0 5px 0 0;
+            color: red;
+        }
+        /* input.bill:focus {
+            border: 1px solid green;
+        } */
+
+        .usdemoji{
+            position: relative;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            border: 1px solid black;
+            font-size: 0.7rem;
+            padding: 2px;
+        }
+
+        .bill{
+            transform: translateX(-100px);
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <main>
+    <form action="">
+        <p class="billprompt"></p>
+        <i class="fa fa-usd usdemoji" aria-hidden="true"></i><input type="number" name="" id="bill" placeholder="0">
+        <div class="inputBtn">
+            <input type="button" value="5%" class="tipBtn">
+            <input type="button" value="10%" class="tipBtn">
+            <input type="button" value="15%" class="tipBtn">
+            <input type="button" value="25%" class="tipBtn">
+            <input type="button" value="50%" class="tipBtn">
+            <input type="number" name="" id="custom" placeholder="custom">
+        </div>
+        
+        <!-- <input type="button" value="calculate" class="tipBtn"> -->
+         <p class="numpersons"></p>
+        <input type="number" name="" id="persons" placeholder="0">
+    </form>
+        <p>Tip Per person<h1 class="tipPerson">$0</h1></p>
+        <p>Total per person<h1 class="totalPerson">$0</h1></p>
+
+        <input type="button" value="Reset" class="reset">
+    
+    </main>
+
+    <script>
+
+        const numpersons = document.querySelector('.numpersons');
+        const billprompt = document.querySelector('.billprompt');
+        const bill = document.querySelector('#bill');
+        const custom = document.querySelector('#custom');
+        const tipBtns = document.querySelectorAll(".tipBtn")
+        const person = document.querySelector('#persons');
+        const tipPerson = document.querySelector('.tipPerson');
+        const totalPerson = document.querySelector('.totalPerson');
+        const resetBtn = document.querySelector('.reset');
+        
+        let billPaid;
+        let customTip;
+        let persons;
+        
+        tipBtns.forEach(btnTip => {
+            
+           btnTip.addEventListener('click', () => { 
+                billPaid = parseInt(bill.value);
+                persons = parseInt(person.value);
+           
+                if (billPaid || persons) {
+                    if (btnTip.value === '5%') {
+                
+                let totalTip = billPaid * 0.05;  
+                calculateValuePerPerson(billPaid, persons, totalTip)
+            // let totalTip = billPaid * 0.05;                
+            // const tipTotalPerson = totalTip / persons;
+            // const totalBillPerPerson = (billPaid + totalTip) / persons;
+            
+            // tipPerson.innerHTML = `$${tipTotalPerson}`;
+            // totalPerson.innerHTML = `$${totalBillPerPerson}`;
+            }
+            if (btnTip.value === '10%') {
+                      
+                let totalTip = billPaid * 0.1;                
+                calculateValuePerPerson(billPaid, persons, totalTip)
+            } ;
+            if (btnTip.value === '15%') {
+                            
+                let totalTip = billPaid * 0.15;                
+                calculateValuePerPerson(billPaid, persons, totalTip)
+            };
+            if (btnTip.value === '25%') {
+                            
+                let totalTip = billPaid * 0.25;                
+                calculateValuePerPerson(billPaid, persons, totalTip )
+            };
+            if (btnTip.value === '50%') {
+                       
+                let totalTip = billPaid * 0.5;                
+                calculateValuePerPerson(billPaid, persons, totalTip )
+            }
+            }else {
+                    billprompt.style.borderColor = 'red';
+                    numpersons.innerHTML = `Can't be zero`;
+                    person.style.borderSize = '1px';
+                    person.style.borderColor = 'red'
+                }
+            })
+        })
+                
+                
+
+        resetBtn.addEventListener('click', () => {
+            bill.value = '';
+            custom.value = '';
+            person.value = '';
+            tipPerson.innerHTML = `$0.00`;
+            totalPerson.innerHTML = `$0.00`;
+        })
+        
+
+        custom.addEventListener('keypress', () => {
+            billPaid = parseInt(bill.value);
+            customTip = parseInt (custom.value);
+            persons = parseInt(person.value);
+            if (event.key === "Enter") {
+                event.preventDefault();
+                
+                let totalTip = billPaid * customTip / 100;                
+                calculateValuePerPerson(billPaid, persons, totalTip)
+            }
+        })
+    
+        
+        function calculateValuePerPerson(billPaid, persons, totalTip) {
+        
+            const tipTotalPerson = totalTip / persons;
+            const totalBillPerPerson = (billPaid + totalTip) / persons;
+
+            tipPerson.innerHTML = `$${tipTotalPerson.toFixed(2)}`;
+            totalPerson.innerHTML = `$${totalBillPerPerson.toFixed(2)}`;
+        }  
+
+
+
+    </script>
+</body>
+</html>
