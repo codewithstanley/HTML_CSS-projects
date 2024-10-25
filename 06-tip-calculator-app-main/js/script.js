@@ -20,6 +20,7 @@ btns.forEach(btn => {
         
 
         if(billValue && personValue) {
+
             if(btn.value === '5%') {
                 let totalTip = billValue * 0.05;
                 calculateTotalResult(billValue, personValue, totalTip)
@@ -44,7 +45,7 @@ btns.forEach(btn => {
             bill.style.borderColor = 'red';
             personError.innerHTML = `Can't be zero`;
            // persons.style.borderSize = '1px';
-            persons.style.borderColor = 'red'    
+            persons.style.borderColor = 'red';    
         }
     });
 });

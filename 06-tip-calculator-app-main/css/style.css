@@ -181,6 +181,7 @@ label {
     border: none;
     border-radius: 5px;
     font-family: 'Space Mono', monospace;
+    cursor: pointer;
     transition: 0.3 ease;
 }
 
