@@ -45,8 +45,8 @@
         </fieldset>
         
         <div class="form-group">
-          <label for="bill">Number of People</label>
-          <input type="Number" placeholder="0">
+          <label for="bill">Number of People</label><span class="person-error"></span>
+          <input type="Number" placeholder="0" id="persons">
           <i class="fa fa-user"></i>
         </div>
         
@@ -57,15 +57,15 @@
       <div class="total-bill">
         <div class="tip-amount">
           <p>Tip Amount <span>/ person</span></p>
-          <p>$0.00</p>
+          <p class="tipAmount">$0.00</p>
         </div>
         <div class="tip-amount">
           <p>Total <span>/ person</span></p>  
           
-          <p>$0.00</p>
+          <p class="total-person">$0.00</p>
         </div>
         
-        <input type="reset" value="reset">
+        <input type="reset" value="reset" id="reset">
         
       </div>
     </section>
@@ -78,5 +78,7 @@
       Coded by <a href="#">codewithstanley</a>.
     </div>
   </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>

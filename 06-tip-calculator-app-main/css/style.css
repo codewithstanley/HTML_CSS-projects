@@ -81,7 +81,7 @@ label {
     border-radius: 4px;
     border: 2px solid var(--very-light-grayish-cyan);
     background-color: var(--very-light-grayish-cyan);
-    padding: 5px 0;
+    padding: 5px 10px;
     margin-bottom: 1.2rem;
     font-family: "Space Mono", monospace;
     outline: none;
@@ -187,6 +187,12 @@ label {
 .display-section input[type=reset]:hover {
     background-color: var(--very-bright-cyan);
     color: var(--very-dark-cyan);
+}
+
+.person-error {
+    color: red;
+    font-size: 0.5rem;
+    margin-left: 7rem;
 }
 
 
