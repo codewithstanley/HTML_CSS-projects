@@ -1,0 +1,97 @@
+:root {
+    /* ### Primary */
+    --Lime: hsl(61, 70%, 52%);
+    --Red: hsl(4, 69%, 50%);
+
+    /* ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Slate-100: hsl(202, 86%, 94%);
+    --Slate-300: hsl(203, 41%, 72%);
+    --Slate-500: hsl(200, 26%, 54%);
+    --Slate-700: hsl(200, 24%, 40%);
+    --Slate-900: hsl(202, 55%, 16%);
+}
+
+* , *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    background-color: #fff;
+    width: 250px;
+    max-width: 80%;
+}
+
+.input-section {
+    padding: 20px;
+}
+
+.input-section h1 {
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label{
+    font-size: 0.75rem;
+}
+
+.input-section input[type=text] {
+    display: block;
+    width: 100%;
+    padding: 5px 5px 5px 0;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--Slate-300);
+}
+
+/* .input-section input[type=text]:first-of-type::placeholder{
+    width: 15px;
+    padding: 5px;
+} */
+
+.input-section h2 {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.radio-group{
+    border: 1px solid var(--Slate-300);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.input-section input[type=button] {
+    display: block; 
+    background-color: var(--Lime);
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+}
+
+
+.display-section {
+    background-color: var(--Slate-900);
+    color: var(--White);
+    padding: 20px;
+}
