@@ -33,4 +33,17 @@ body {
     font-family: "Josefin Sans", sans-serif;
     line-height: 1.5;
     font-size: 18px;
+    background: url(../images/bg-desktop-light.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}   
+
+main {
+    width: 378px;
+    background-color: #fff;
+    
 }
